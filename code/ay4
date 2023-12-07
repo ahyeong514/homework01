@@ -1,1 +1,118 @@
 기말고사 노트정리 시작
+원격저장소
+-깃허브,비트버킷,https:..guthub.com/git
+
+원격 저장소를 지역 저장소에 복제(clone)
+-공개된 저장소는 소유와 고나계없이 누구나 가능
+
+깃허브 원격저장소 생성
+-저장소이름 git-clone
+-https주소 복사
+
+PC 깃에서 원격저장소 복제(git clone)
+-$ git clone[복사된-주소]        원격저장소와 동일한 이름으로 복제
+-$ git clone[복사된-주소][새로운-폴더명]         하부 폴더[새로운-폴더명]이름으로 복제
+-$ git clone[복사된-주소]               현재 폴더에 바로 복제
+
+원격 저장소 별칭 이름 점검
+-$ git remote     원격 저장소 목록(기본 이름 origin점검, 위에서 clone을 했기 때문에 별칭 orgin이 위의 주소가 설정)
+
+$ git remote-v
+-저장소 주소 등 원격 저장소 정보 목록 표시
+
+깃허브에 원격 저장소 생성
+-저장소 목록 보기
+
+원격 저장소 복제
+-$ git clone https://github.com/atom.git
+-$ git clone https://github.com/atom.git
+-$ git clone https://github.com/atom.git mytest
+
+원격 저장소 관리
+-$ git remote-v
+-$ git remote show orgin 
+-$ git remote rename origin org
+-$ git remote rm org
+
+vscode로 원격 저장소 관리
+-Clone gir repository 클릭
+
+깃 깃허브 push pull
+일상 생활
+-밀기 끌기
+
+깃허브
+-올리기 내리기
+
+원격 저장소 수정 후 지역 저장소에서 pull
+깃허브 원격 저장소에서 수정 후 커밋
+-원격 저장소의 수정을 지역 저장소에 반영(지역 저장소에서 pull)
+
+윈도 push 중 오류
+-참조 오류발생가능
+-인증 오류 발생 가능
+인증오류해결방법
+-PAT로 연결
+
+지역 저장소에서 push
+-쓰기 권한이 있어야 push가 가능(자신이 저장소나 다른 사람의 저장소라면 협업자로 등록)
+-push(로컬 저정소에서 남겨놓은 코드 변경 이력들이 원격 저장소로 전송)
+-명령$ git push<저장소별칭명><브랜치명>($ git push origin topic
+
+명령 push에서 인자 생략하기 
+-옵션-u 사용
+(최초에 한 번만 저장소명과 브랜치명을 입력하고 그 이후에는 모든 인자를 생략 가능)
+* $ git push origin topic
+(성공 이후 간단히 다음으로 가능)
+* $ git push
+
+-대부분의 경우에는 로컬 저장소와 원격 저장소에서 동일한 브랜치 이름을 사용하기 때문에 항상 현재 브랜치를 기준으로 git push 명령어가 작동한다면 매우 편리
+(설정변수 push.default 를 current로 설정)
+* $ git config--global push.default cuttent
+(어느 브랜치에서 작업을 하든 git push 만 날리면 원격 저장소에 동일한 브랜치로 코드 변경이 업로드 됨)
+* $ git push
+
+원격 저장소 복제 연동
+-$ git clone https://github.com/atom/atom.git
+원격저장소 수정 사항 py=ull로 지역 저장소로 가져와 병합하기
+-$ git pull origin main
+-$ git pull
+원격 저장소 수정 사항 fetch로 지역 저장소로 가져와 병합하기
+-$ git fetch origin main
+-$ git fetch
+-$ git merge origin/main
+지역 저장소 수정 사항 push로 원격 저장소 보내기
+-$ git push origin main
+-$ git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
