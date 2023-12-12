@@ -1,0 +1,27 @@
+3-way 병합 수행
+새로운 커밋 E 생성
+-두 브랜치의 변경을 가져온 merge commit E를 생성
+*병합 완료 후, 통합 브랜치인 master 브랜치로 통합된 이력이 생성
+*-m이 없으면 메시지 입력할 기본 편집기 실행
+Merge branch bugfix이 기본 메시지 내용
+
+일렬 상태에서 기본이 fast forward 병합
+-병합할 브랜치의 조상이 기준 브랜치인 경우, 즉 일렬 상태에서
+*병합 기본은 fast forward 병합
+*마스터 브랜치에서 브랜치 dev1을 병합
+ 기본이 fast-forward병합
+
+기본이 fast forward 상태에서 non fast forward 병합
+-마스터에서 dev1을 fast forward로 병합
+* $ git merge dev1
+
+-마스터에서 dev1을 non fast forward로 병합
+*옵션--no-ff
+$ git merge dev1--no-ff
+
+non fast-forward 병합 옵션을 지정
+-non fast-forward 병합
+$ git merge--no-ff
+병합 실행 시에 fast-forward병합이 가능한 경우라도 2-way병합을 수행
+병합된 브랜치가 그대로 남기 때문에
+  그 브랜치로 실행한 작업 확인 및 브랜치 관리 면에서 더 유용
