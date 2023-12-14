@@ -1,0 +1,53 @@
+3-way 상태에서 base의 이해
+-master 브랜치 커밋 B 에서 분기되는 bugfix 브랜치
+커밋B
+현재 master와 bugfix의 공통 조상
+이를 base라 칭함
+
+선형적 통합 rebase이해
+-브랜치 bugfib 에서 base 를 바꾸는 재배치하기 이전
+$ git rebase master
+
+-재배치 rebase 병합 수행
+base를 수정
+B에서 마스터 최신 커밋인 D로 수정
+D 이후에 bugfix 배치
+
+이후 다시 fastforward 병합 수행: 이 병합을 직접 다시 해야함
+master 브랜치의 HEAD 가 budfix 브랜치 마지막 커밋으로 이동
+로그 이력이 분기 없이 하나의 줄기로 이어짐
+
+rebase를 이요한 브랜치 병합 과정
+fast-forward병합 방식
+-master 브랜치 뒤로 bugfix브랜치 이력의 이동
+이력이 하나의 줄기로 이어짐
+충돌 발생이 가능
+
+rebase 만 하면 다음 그림처럼 master의 위치는 그대로 유지
+$git rebase master
+
+마스터 브랜치으 위치를 변경하기 위해서는
+master 브랜치에서 bugfix브랜치를 fast-forward병합 필요
+$ git merge bugfix
+
+rebase에서의 충돌
+-충돌 발생 가능
+이동되는 엑스와 와이의 냉ㅇ이 마스터의 씨와 디 커밋들과 충돌하는 부분이 생길 수 있음
+(각각의 커밋에서 발생한 충돌 내용을 수정 후,추가,계속 수행 필요
+
+충돌 발생 후 해결 절차
+-파일수정
+-파일 추가
+($ git add<수정파일>
+rebase 계속 수행,마지막 메시지 메시지 수정
+$ git rebase--continue
+
+
+
+
+
+
+
+
+
+
