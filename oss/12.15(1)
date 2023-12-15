@@ -1,0 +1,23 @@
+최근 커밋 메시지 수정
+기본 편집기 설정 방법
+-$ git config--global core.editor'code--wait'
+설정된 편지기로 최근 커밋 메시지 수정
+-$ git commit --ammend
+새로운 커밋 아이디로 수정됨
+최근 커밋 메시지를 직접 입력해 수정
+$ git commit--ammend-m"an updated commit message"
+새로운 커밋 아이디로 수정됨
+
+HEAD의 내용 수정
+-새로운 파일을 추가하거나 파일을 수정한 후
+-새로운 커밋으로 생성하지 않고 
+-최신 커밋에 반영
+새로운 커밋 아이디로 수정됨
+
+기본 편집기로 메시지 편집
+-$ git commit --amend
+명령어 상에 직접 메시지 입력
+-$ git commit --amend-m'new message;
+메시지 수정 없이 다시 커밋 수정
+-$ git commit --amend--no-edit
+
